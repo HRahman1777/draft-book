@@ -1,0 +1,7 @@
+CMD RUN IN \xampp\mysql\bin
+
+***	Dump SQL File 
+
+#	mysqldump -uroot -p trainset_db > /trainset_db.sql
+
+'trainset_db' is the database name to dump, '/trainset_db.sql' is location of file that to store dump information.
