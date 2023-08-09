@@ -14,6 +14,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
+
+/*
+//  OR WE CAN USE THIS >>>
+$username = $conn->real_escape_string($_POST['username']);
+$password = $conn->real_escape_string($_POST['password']);
+ */
+
+
 $username = "44011";
 //$password = "' OR ' 1=1"; // Payload
 $password = "I-148";
