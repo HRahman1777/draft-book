@@ -25,3 +25,19 @@ echo $diff->format("%y-%m-%d %h:%m:%s ");
 $Date1 = '2022-09-15 09:00:00';
 $Date2 = date('Y-m-d H:m:s', strtotime($Date1 . " + 1 day 5 hours"));
 echo $Date2;
+
+// RETURN ALL MINUTES FROM A TIME RANGE
+$startTime = '08:15';
+$endTime = '08:25';
+print_r(printMinutesBetweenTimes($startTime, $endTime));
+function printMinutesBetweenTimes($startTime, $endTime)
+{
+    $start = strtotime($startTime);
+    $end = strtotime($endTime);
+    $all_minutes_array = [];
+    while ($start <= $end) {
+        $all_minutes_array[] = date('H:i', $start);
+        $start = strtotime('+1 minute', $start);
+    }
+    return $all_minutes_array;
+}
